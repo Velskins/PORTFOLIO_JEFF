@@ -46,21 +46,11 @@ main > section{
     box-sizing: border-box;
 }
 
-#part1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#part4, #part5{
-    display: flex;  /* ✅ Aligne les images en ligne */
-    flex-direction: column;
-    align-items: center; /* ✅ Centrage vertical */
-    flex-wrap: wrap; /* ✅ Passe à la ligne si l'espace manque */
-}
-
 /*Typographie global*/
+
+a{
+    text-decoration: none;
+}
 
 h1{
     font-size: 3rem;
@@ -87,9 +77,14 @@ span{
 
 
 /*Part1*/
+#part1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .btn{
-    /* From Uiverse.io by adamgiebl */ 
     background-color: #e0e0e0;
     border-radius: 50rem;
     box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
@@ -142,7 +137,7 @@ span{
 }
 
 #part2-text p{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 #part2-text p:hover {
@@ -198,7 +193,7 @@ span{
   /* Par défaut, le texte n'a pas de position forcée (il sera positionné via les sélecteurs suivants) */
   .skill-text {
     display: none;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1;
   }
 
@@ -231,6 +226,13 @@ span{
 
 /*Part4*/
 
+#part4 {
+    display: flex;  /* ✅ Aligne les images en ligne */
+    flex-direction: column;
+    align-items: center; /* ✅ Centrage vertical */
+    flex-wrap: wrap; /* ✅ Passe à la ligne si l'espace manque */
+}
+
 .project-container{
     height: 75vh;
     width: 100%;
@@ -251,12 +253,11 @@ span{
 }
 
 #kick{
-    height: 50%;
+    height: 60%;
     padding: 10px;
-    background-color: #e0e0e0;
-    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
     cursor: pointer;
     margin-bottom: 2%;
+    border-radius: 25px;
 }
 
 #git{
@@ -270,6 +271,9 @@ span{
 }
 
 #pj{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 85%;
     width: 85%;
     border-radius: 50px;
@@ -279,6 +283,13 @@ span{
 }
 
 /*Part5*/
+
+#part5{
+    display: flex;  /* ✅ Aligne les images en ligne */
+    flex-direction: column;
+    align-items: center; /* ✅ Centrage vertical */
+    flex-wrap: wrap; /* ✅ Passe à la ligne si l'espace manque */
+}
 
 #contact-ext{
     width: 90%;
@@ -384,4 +395,110 @@ form button:hover {
         margin: 0 20%;
         margin-top: 5%;
 }
+
+
+@media screen and (max-width: 1380px) { 
+    #part2-text p{
+        font-size: 0.7rem;
+    }
+
+      #kick{
+        height: 60%;
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 2%;
+    }
+
+    #contact-ext{
+        margin: 50px 0;
+    }
+
+    #contact-img img{
+        width: 60px;
+        height: 60px;
+        padding: 0px;
+        margin: 0 20%;
+        margin-top: 5%;
+}
+}
+
+/* Ajustements responsive pour les écrans de moins de 768px */
+@media screen and (max-width: 900px) {    
+    body{
+        line-height: 1.4; /* ✅ Améliore la lisibilité du texte */
+    }
+
+    #part2-text p{
+        font-size: 0.6rem;
+    }
+
+    .skill-text p {
+        font-size: 1em;
+        line-height: 1;
+      }
+
+      .skill-text span {
+        font-size: 1.2em;
+      }
+
+      .skill-logo {
+        margin: 0 0px;
+      }
+
+
+    .project-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .project-container > div{
+        width: 100%;
+        height: 55%;
+        margin: 2%;
+        background-color: #e0e0e0;
+        border-radius: 5rem;
+        box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+      #pj h2{
+        font-size: 1em;
+      }
+
+      #kick{
+        height: 60%;
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 0%;
+    }
+
+    #git{
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+
+    #contact-ext{
+        margin: 50px 0;
+    }
+
+    #contact-img img{
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        margin: 0 20%;
+        margin-top: 5%;
+}
+
+    
+}
+
+
+
+
+
+
 
